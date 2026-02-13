@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <div class="logo"></div>
+        <button id="cart-toggle" class="cart-btn">
+          Cart
+          <img src="./SVGs/hand-bag-icon.svg" alt="Cart" style="width: 20px" />
+          <!-- <span style="font-size: 1.2rem">&#128717;</span> -->
+          <span id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Product Section -->
+      <section class="product-section">
+        <!-- Left: Gallery -->
+        <div class="product-gallery">
+          <div id="desktop-gallery" class="gallery-desktop-mosaic">
+            <!-- Dynamic Content -->
+          </div>
+          <!-- Mobile Gallery Structure (Hidden on Desktop via CSS) -->
+          <div id="mobile-gallery" class="gallery-mobile">
+            <!-- Dynamic Content -->
+          </div>
+        </div>
+
+        <!-- Right: Details -->
+        <div class="product-details">
+          <h1 id="product-title" class="product-title">Loading...</h1>
+          <p id="product-price" class="product-price">...</p>
+
+          <p id="product-desc-1" class="product-description">
+            Loading description...
+          </p>
+
+          <div class="piece-specs">
+            <p class="section-label">Piece Specifications</p>
+            <p id="spec-desc" class="spec-description">Loading specs...</p>
+          </div>
+
+          <!-- Specs Grid -->
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span>Gold</span>
+              <span id="gold-spec" class="spec-value"></span>
+              <span id="gold-text"></span>
+            </div>
+            <div class="spec-item">
+              <span>Diamond</span>
+              <span id="diamond-spec" class="spec-value"></span>
+              <span id="diamond-text"></span>
+            </div>
+            <div class="spec-item">
+              <span>Clarity</span>
+              <span id="clarity-spec" class="spec-value"></span>
+              <span id="clarity-text"></span>
+            </div>
+          </div>
+
+          <!-- Options -->
+          <div class="product-options">
+            <div class="option-group">
+              <span class="option-label">Color</span>
+              <div id="color-options" class="options-container colors">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+
+            <div class="option-group">
+              <span class="option-label">Size</span>
+              <div id="size-options" class="options-container sizes">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button id="add-to-cart-btn" class="add-btn">Add To Cart</button>
+            <button id="remove-from-cart-btn" class="action-remove-btn">
+              -
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collection Section -->
+      <section class="collection-section">
+        <h2 class="collection-title">Ring Collection</h2>
+        <div id="collection-grid" class="collection-grid">
+          <!-- Injected by JS -->
+        </div>
+        <div class="shop-link-container">
+          <a href="#" class="shop-link-btn">Shop Rings</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart" class="close-btn">&times;</button>
+      </div>
+      <div id="cart-items" class="cart-items">
+        <!-- Injected by JS -->
+        <p class="empty-msg">Your cart is empty.</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cart-total">$0</span>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
